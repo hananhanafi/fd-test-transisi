@@ -1,0 +1,102 @@
+@mixin explore {
+    .explore {
+        padding: 1.5em;
+        @media screen and (max-width: $medium) {
+            padding: 0;
+        }
+        .content {
+
+            &>div{
+                width: 100%;
+            }
+
+            color: white;
+            margin: auto;
+            width: 60%;
+            height: 100%;
+            @include flex-center();
+            flex-direction: column;
+            @media screen and (max-width: $extra-large) {
+                width: 90%;
+            }
+            @media screen and (max-width: $large) {
+                width: 80%;
+            }
+            @media screen and (max-width: $medium) {
+                width: 100%;
+            }
+
+            h1 {
+                font-weight: bold;
+                letter-spacing: .1em;
+                margin-bottom: 0;
+            }
+
+            p {
+                color: $text-dark;
+            }
+
+            .form-control.search {
+                position: relative;
+                margin-top: 2em;
+                margin-bottom: 2em;
+                .search-icon{
+                    position: absolute;
+                    top: 50%; 
+                    left: 20px;
+                    transform: translate(-50%, -50%); 
+                    img {
+                        @include square(12px);
+                        filter:  brightness(0) invert(1);
+                    }
+                }
+
+                input {
+                    background-color: #3B3E52;
+                    border-radius: 16px;
+                    color: white;
+                    padding: 1em;
+                    height: 4em;
+                    border: unset;
+                    width: 100%;
+                    padding-left: 40px;
+                    
+                    &::placeholder {
+                        color: $text-dark;
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+            
+            h4 span{
+                color: $text-dark;
+            }
+
+            .project-list {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                text-align: center;
+                .project {
+                    @include card();
+                    padding: 0;
+                    flex: 1 26%;
+                    max-width: 26%;
+                    margin-bottom: 16px;
+                    
+                    P {
+                        margin-top: 0;
+                    }
+
+                    @include box();
+                    
+                    
+                }
+            }
+        }
+
+    }
+}

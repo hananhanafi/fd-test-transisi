@@ -1,0 +1,13 @@
+@mixin card {
+    border-radius: 20px;
+    padding: 16px;
+}
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin square($size) {
+    height: $size;
+    width: $size;
+}

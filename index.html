@@ -4,9 +4,186 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/css/main.css">
     <title>Frontend Developer Test Transisi</title>
 </head>
 <body>
-    
+    <section class="container">
+
+        <button class="menu">
+            <img src="./assets/icons/menu.svg" alt="">
+        </button>
+
+        <div class="explore">
+            <div class="content">
+                <div>
+                    <div>
+                        <h1>Hi Samantha</h1>
+                        <p>Welcome back to the workspace, we missed You!</p>
+                    </div>
+                    <div>
+                        <form>
+                            <div class="form-control search">
+                                <div class="search-icon">
+                                    <img src="./assets/icons/loupe.svg" alt="">
+                                </div>
+                                <input id="search-input" type="text" placeholder="Search Task or Project ...">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Projects <span>(13)</span></h4> 
+                    <div class="project-list">
+                        <div class="project">
+                            <div class="box  bg-1">
+                                <div class="box-content">
+                                    <h2>GH</h2>
+                                </div>
+                            </div>
+                            <p>Green House</p>
+                        </div>
+                        <div class="project">
+                            <div class="box selected bg-2">
+                                <div class="box-content">
+                                    <h2>CB</h2>
+                                </div>
+                            </div>
+                            <p>Cyber Punk</p>
+                        </div>
+                        <div class="project">
+                            <div class="box bg-3">
+                                <div class="box-content">
+                                    <h2>EC</h2>
+                                </div>
+                                <div class="notif"></div>
+                            </div>
+                            <p>Easy Crypto</p>
+                        </div>
+                        <div class="project">
+                            <div class="box bg-4">
+                                <div class="box-content">
+                                    <h2>TA</h2>
+                                </div>
+                            </div>
+                            <p>Travel App</p>
+                        </div>
+                        <div class="project">
+                            <div class="box bg-5">
+                                <div class="box-content">
+                                    <h2>LP</h2>
+                                </div>
+                                <div class="notif"></div>
+                            </div>
+                            <p>Landing Page</p>
+                        </div>
+                        <div class="project">
+                            <div class="box">
+                                <div class="box-content">
+                                    <h2>8+</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-detail">
+            <div class="project-summary">
+                <div>
+                    <h2>Cyber Punk</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, tempora.</p>
+                </div>
+                <div class="member">
+                    <ul>
+                        <li>
+                            <img src="./assets/images/person-1.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="./assets/images/person-2.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="./assets/images/person-3.jpg" alt="">
+                        </li>
+                    </ul>
+                    
+                    <button class="add">
+                        <img src="./assets/icons/add-circle-1.svg" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="project-tasks">
+                <div class="header">
+                    <h5>Today</h5>
+                    <div class="more">
+                        <img src="./assets/icons/more-1.svg" alt="">
+                    </div>
+                </div>
+                <div class="task-list">
+                    <ul>
+                        <li>
+                            <div class="input-check">
+                                <input type="checkbox" id="checkbox-1" checked>
+                                <label for="checkbox-1"></label>
+                            </div>
+                            <p>Create initial layout for homepage</p>
+                            <span class="status approved">Approved</span>
+                        </li>
+                        <li>
+                            <div class="input-check">
+                                <input type="checkbox" id="checkbox-2" checked/>
+                                <label for="checkbox-2"></label>
+                            </div>
+                            <p>Fixing icons with transparent background</p>
+                            <span class="status in-progress">In Progress</span>
+                        </li>
+                        <li>
+                            <div class="input-check">
+                                <input type="checkbox" id="checkbox-3" checked/>
+                                <label for="checkbox-3"></label>
+                            </div>
+                            <p>Fixing icons with transparent background</p>
+                            <span class="status in-progress">In Progress</span>
+                        </li>
+                        <li>
+                            <div class="input-check">
+                                <input type="checkbox" id="checkbox-4" checked/>
+                                <label for="checkbox-4"></label>
+                            </div>
+                            <p>Create initial layout for homepage</p>
+                            <span class="status in-progress">In Progress</span>
+                        </li>
+                        <li>
+                            <div class="input-check">
+                                <input type="checkbox" id="checkbox-5" />
+                                <label for="checkbox-5"></label>
+                            </div>
+                            <p>Discussions regarding workflow improvement</p>
+                            <span class="status in-preview">In Preview</span>
+                        </li>
+                        <li>
+                            <div class="input-check">
+                                <input type="checkbox" id="checkbox-6" />
+                                <label for="checkbox-6"></label>
+                            </div>
+                            <p>Create questions for app redesign project</p>
+                            <span class="status waiting">Waiting</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <button id="add-task-btn" class="add-task">
+                <img src="./assets/icons/add-1.svg" alt="">
+            </button>
+        </div>
+
+        <img src="./assets/images/dots.png" class="ornament ornament-1" alt="">
+        <img src="./assets/images/dots.png" class="ornament ornament-2" alt="">
+
+    </section>
 </body>
+<script src="./scripts/main.js"></script>
 </html>

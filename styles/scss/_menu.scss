@@ -1,0 +1,22 @@
+@mixin menu {
+    .menu {
+        @include card();
+        @include flex-center();
+        @include square(36px);
+        padding: .25em;
+        background-color: #3B3E52;
+        border-radius: 12px;
+        position: absolute;
+        top: 2em;
+        left: 2em;
+        @media screen and (max-width: $medium) {
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+        
+        img {
+            @include square(16px);
+        }
+    }
+}

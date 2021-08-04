@@ -1,0 +1,19 @@
+@mixin ornaments {
+    .ornament {
+        position: absolute;
+        @include square(120px);
+        opacity: .1;
+        @media screen and (max-width: $medium) {
+            display: none;
+        }
+
+        &.ornament-1{
+            top: 0;
+            left: 36vw;
+        }
+        &.ornament-2{
+            bottom: -5%;
+            left: 8vw;
+        }
+    }
+}

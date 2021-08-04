@@ -1,0 +1,154 @@
+@mixin circle-bg($top:false,$right:false,$bottom:false,$left:false){
+    content: "";
+    position: absolute;
+    @include square(50%);
+    border: 16px solid white;
+    opacity: .2;
+    border-radius: 100%;
+    @if $top {
+        top: $top;
+    }
+    @if $right {
+        right: $right;
+    }
+    @if $bottom {
+        bottom: $bottom;
+    }
+    @if $left {
+        left: $left;
+    }
+}
+@mixin square-bg($top:false,$right:false,$bottom:false,$left:false){
+    content: "";
+    position: absolute;
+    @include square(50%);
+    border: 16px solid white;
+    opacity: .2;
+    @if $top {
+        top: $top;
+    }
+    @if $right {
+        right: $right;
+    }
+    @if $bottom {
+        bottom: $bottom;
+    }
+    @if $left {
+        left: $left;
+    }
+}
+
+@mixin box {
+    .box {
+        @include card();
+        // padding: 4px;
+        position: relative;
+        width: 100%;
+        border-radius: 16px;
+
+        h2 {
+            z-index: 9;
+        }
+        
+        &.selected {
+            &.bg-1 {
+                border: 2px solid #FA2C8A;
+            }
+            &.bg-2 {
+                border: 2px solid #2ED2A4;
+            }
+            &.bg-3 {
+                border: 2px solid #BB65D3;
+            }
+            &.bg-4 {
+                border: 2px solid #2FB5EF;
+            }
+            &.bg-4 {
+                border: 2px solid #F7BB72;
+            }
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            padding-bottom: 100%;
+        }
+        
+        .box-content {
+            position: absolute;
+            @include square(90%);
+            @include card();
+            border-radius: 16px;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%,-50%);
+            overflow: hidden;
+        }
+
+        &.bg-1 .box-content{
+            background: linear-gradient(to right top, #FA2C8A, #F63BC5);
+            &::before {
+                @include circle-bg($left:-40%,$bottom:-40%)
+            }
+            &::after {
+                @include square-bg($top:-40%,$right:-40%)
+            }
+        }
+        &.bg-2 .box-content{
+            background: linear-gradient(to right top, #2ED2A4, #3879DD);
+            &::before {
+                @include circle-bg($top:-40%,$right:-40%)
+            }
+            &::after {
+                @include square-bg($bottom:-50%,$left:-50%)
+            }
+        }
+        &.bg-3 .box-content{
+            background: linear-gradient(to right top, #BB65D3, #663CBF);
+            &::before {
+                @include circle-bg($bottom:-50%)
+            }
+            &::after {
+                @include square-bg($top:-60%,$left:-60%)
+            }
+        }
+        &.bg-4 .box-content{
+            background: linear-gradient(to right top, #6F48EF, #2FB5EF);
+            &::before {
+                @include circle-bg($left:-50%)
+            }
+            &::after {
+                @include square-bg($bottom:-60%,$right:-60%)
+            }
+        }
+        &.bg-5 .box-content{
+            background: linear-gradient(to right top, #F7BB72, #EB7165);
+            &::before {
+                @include circle-bg($right:-60%,$bottom:-46%)
+            }
+            &::after {
+                @include square-bg($top:-60%,$left:-20%)
+            }
+        }
+
+        .notif {
+            @include square(1em);
+            background-color: white;
+            position: absolute;
+            border-radius: 40px;
+            right: 0;
+            top: 0;
+        }
+        
+    }
+    &:last-child {
+        .box .box-content {
+            background-color: #3B3E52
+        }
+    }
+
+}

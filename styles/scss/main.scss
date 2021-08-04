@@ -1,0 +1,59 @@
+@import 'mixins';
+@import 'menu';
+@import 'explore';
+@import 'box';
+@import 'project_detail';
+@import 'ornaments';
+@import 'variables';
+
+*{
+    box-sizing: border-box;
+    transition: .8s;
+}
+
+button {
+    border: unset;
+    cursor: pointer;
+    background-color: unset;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #DFE1ED;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    @include card();
+    padding: 8px;
+    background-color: #24293F;
+    height: 90vh;
+    width: 80%;
+    display: flex;
+    margin: 4vh auto;
+    position: relative;
+    box-shadow: 0px 120px 80px -100px #24293F;
+    @media screen and (max-width: $medium) {
+        margin: 1vh auto;
+    }
+
+    &>div{
+        width: 50%;
+        @media screen and (max-width: $large) {
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: $large) {
+        display: block;
+        width: 90%;
+        height: 100%;
+    }
+
+    @include ornaments();
+    @include menu();
+    
+    @include explore();
+    @include project_detail();
+}

@@ -78,7 +78,7 @@ body {
 
 .container .ornament.ornament-2 {
   bottom: -5%;
-  left: 8vw;
+  left: 10vw;
 }
 
 .container .menu {
@@ -258,7 +258,7 @@ body {
 }
 
 .container .explore .content .project-list .project P {
-  margin-top: 0;
+  margin-top: .5em;
 }
 
 .container .explore .content .project-list .project .box {
@@ -469,6 +469,7 @@ body {
   border-radius: 40px;
   right: 0;
   top: 0;
+  border: 2px solid #3B3E52;
 }
 
 .container .explore .content .project-list .project:last-child .box .box-content {
@@ -481,8 +482,7 @@ body {
   background-color: white;
   color: black;
   height: 100%;
-  padding: 2em 4em;
-  padding-left: 3em;
+  padding: 4em;
   overflow-y: auto;
 }
 
@@ -506,7 +506,7 @@ body {
   color: #8B8EA2;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
   .container .project-detail .project-summary {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

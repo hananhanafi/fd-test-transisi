@@ -4,8 +4,7 @@
         background-color: white;
         color: black;
         height: 100%;
-        padding: 2em 4em;
-        padding-left: 3em;
+        padding: 4em;
         overflow-y: auto;
         @media screen and (max-width: $large) {
             padding: 1em;
@@ -20,7 +19,7 @@
                 color: $text-dark
             }
 
-            @media screen and (max-width: $large) {
+            @media screen and (max-width: $extra-large) {
                 flex-direction: column;
             }
 
